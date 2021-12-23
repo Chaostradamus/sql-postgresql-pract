@@ -1,0 +1,27 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "sql",
+            "database": "my_events",
+            "username": "sql"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "postgres",
+            "username": "postgres",
+            "database": "my_events"
+        }
+    ]
+}
