@@ -20,3 +20,10 @@ INSERT INTO events (
          18
          );
          
+
+         UPDATE events
+         SET min_age = 16
+         WHERE id = 1;
+
+         DELETE from events
+         WHERE id = 1;
