@@ -4,10 +4,10 @@ CREATE TABLE cities (
 
 
 CREATE TABLE locations (
-    id INT PRIMARY KEY AUTO_INCREMENT, --MYSQL
-    -- id SERIAL PRIMARY KEY, --postgresql
+    --id INT PRIMARY KEY AUTO_INCREMENT, --MYSQL
+    id SERIAL PRIMARY KEY, --postgresql
     title VARCHAR(300), 
-    street(300) NOT NULL,
+    street VARCHAR(300) NOT NULL,
     house_number VARCHAR(10) NOT NULL,
     postal_code VARCHAR(5) NOT NULL CHECK,
     city_name VARCHAR(200) REFERENCES cities ON DELETE RESTRICT ON UPDATE CASCADE
@@ -33,8 +33,8 @@ CREATE TABLE tags (
 );
 
 CREATE TABLE events (
-    id INT PRIMARY KEY AUTO_INCREMENT, --MYSQL
-    -- id SERIAL PRIMARY KEY, --postgresql
+    --id INT PRIMARY KEY AUTO_INCREMENT, --MYSQL
+    SERIAL PRIMARY KEY, --postgresql
     name VARCHAR(300) NOT NULL CHECK (LENGTH(name) > 5),
     date_planned TIMESTAMP NOT NULL,
     image VARCHAR(300),
@@ -58,3 +58,4 @@ CREATE TABLE events_tags (
    tag_name VARCHAR(100) REFERENCES tags ON DELETE CASCADE,
     PRIMARY KEY (event_id, tag_id)
 );
+

@@ -4,8 +4,8 @@ CREATE TABLE cities (
 
 
 CREATE TABLE locations (
-    id INT PRIMARY KEY AUTO_INCREMENT, --MYSQL
-    -- id SERIAL PRIMARY KEY, --postgresql
+   -- id INT PRIMARY KEY AUTO_INCREMENT, --MYSQL
+    id SERIAL PRIMARY KEY, --postgresql
     title VARCHAR(300), 
     street(300) NOT NULL,
     house_number VARCHAR(10) NOT NULL,
@@ -14,8 +14,8 @@ CREATE TABLE locations (
 );
 
 CREATE TABLE events (
-    id INT PRIMARY KEY AUTO_INCREMENT, --MYSQL
-    -- id SERIAL PRIMARY KEY, --postgresql
+    --id INT PRIMARY KEY AUTO_INCREMENT, --MYSQL
+    id SERIAL PRIMARY KEY, --postgresql
     name VARCHAR(300) NOT NULL CHECK (LENGTH(name) > 5),
     date_planned TIMESTAMP NOT NULL,
     image VARCHAR(300),
